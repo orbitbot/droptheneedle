@@ -15,7 +15,10 @@ module.exports = {
     rootImport({ root: `${__dirname}/src`, extensions: ['.js', '/index.js'] }),
     nodeResolve({ jsnext: true, main: true, browser: true, preferBuiltins: false }),
     commonjs({}),
-    copy({ 'resources/' : 'dist/' }),
+    copy({
+      'resources/' : 'dist/',
+      'node_modules/@ajusa/lit/dist/lit.css' : 'dist/lit.css'
+    }),
     buble(),
     filesize()
   ]

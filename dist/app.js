@@ -1270,7 +1270,16 @@
 	});
 
 	mithril.mount(document.body, {
-	  view : function () { return mithril('h2', 'hello worlds'); }
+	  view : function () { return [
+	    mithril('h2', 'random needle drop'),
+	    mithril('hr'),
+	    mithril('p',
+	      'play random tracks using your Spotify account, inspired by ',
+	      mithril('a[href="https://www.youtube.com/channel/UCt_WajkNSMekKAv7g_CxOLQ"][target=_blank]','knocksquared')
+	    ),
+	    mithril('p', 'click below to get started'),
+	    mithril('button.btn.primary', { onclick : function () { return console.log('cliky'); } }, 'log in to Spotify')
+	  ]; }
 	});
 
 })));
