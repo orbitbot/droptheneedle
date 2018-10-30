@@ -10,8 +10,9 @@
   "bugs": {
     "url": "https://github.com/orbitbot/droptheneedle/issues"
   },
-  "scripts" : {
-    "dev" : "wright dist/index.html -r 'm.redraw'"
+  "scripts": {
+    "build": "INIT_CWD=. node config/build",
+    "dev": "INIT_CWD=. node config/dev"
   },
   "homepage": "https://github.com/orbitbot/droptheneedle#readme",
   "devDependencies": {
@@ -22,7 +23,8 @@
     "rollup-plugin-copy": "^0.2.3",
     "rollup-plugin-filesize": "^4.0.1",
     "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-root-import": "^0.2.3"
+    "rollup-plugin-root-import": "^0.2.3",
+    "wright": "^1.2.5"
   },
   "dependencies": {
     "@ajusa/lit": "^1.1.0",
